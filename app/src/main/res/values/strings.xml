@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Azadi</string>
+    <string name="submit">Submit</string>
+    <string name="password">Password</string>
+    <string name="enter_address">Enter Address</string>
+    <string name="login_with_google">Login with Google</string>
+    <string name="login_with_facebook">Login with Facebook</string>
+    <string name="create_new_account">CREATE NEW ACCOUNT</string>
+    <string name="email">Email</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="phone_no">Phone No.</string>
+    <string name="last_name">Last Name</string>
+    <string name="full_name">Full Name</string>
+    <string name="email_mobile">Email/Mobile</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="forgot">Forgot Password ?</string>
+    <string name="send">Send</string>
+    <string name="get_started">Get Started</string>
+    <string name="welcome_to_our_community">Welcome to our community.</string>
+    <string name="hope_will_all_help_each_other_and_get_success_towars_our_dreams">Hope will all help each other and get success towars our dreams !</string>
+    <string name="the_beginning_of_a_long_journey">The Beginning of a Long Journey...</string>
+    <string name="presonalize_your_experience">Presonalize your experience</string>
+    <string name="choose_your_favourite_categories">Choose your favourite categories</string>
+    <string name="choose_your_favourite_sub_categories">Choose your favourite  sub categories</string>
+    <string name="next">Next</string>
+    <string name="to_experience_better_recommendations">to experience better recommendations</string>
+    <string name="sub_category">Sub Category</string>
+
+
+</resources>

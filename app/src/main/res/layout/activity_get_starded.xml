@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/getstart"
+    tools:context=".activity.GetStardedActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:gravity="center"
+                android:textColor="@color/red"
+                android:text="@string/the_beginning_of_a_long_journey"
+                android:fontFamily="@font/google_sans_medium"
+                android:textSize="@dimen/_16sdp" />
+
+
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/_25sdp"
+        android:layout_height="wrap_content">
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:id="@+id/btStart"
+            app:cornerRadius="20dp"
+            android:text="@string/get_started"
+            android:textAllCaps="false"
+            android:elevation="5dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/google_sans_medium"
+            android:layout_marginTop="20dp"
+            android:layout_height="50dp">
+
+        </com.google.android.material.button.MaterialButton>
+
+        <TextView
+            android:id="@+id/tx"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_below="@+id/btStart"
+            android:text="@string/welcome_to_our_community"
+            android:fontFamily="@font/google_sans_medium"
+            android:textSize="12sp" />
+
+
+        <TextView
+            android:id="@+id/tx1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:layout_below="@+id/tx"
+            android:textColor="@color/white"
+            android:text="@string/hope_will_all_help_each_other_and_get_success_towars_our_dreams"
+            android:fontFamily="@font/google_sans_medium"
+            android:textSize="12sp" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.SelectSubCatActivity">
+    <TextView
+        android:id="@+id/tx1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:text="@string/sub_category"
+        android:fontFamily="@font/google_sans_medium"
+        android:textSize="16sp" />
+
+
+    <TextView
+        android:layout_below="@+id/tx1"
+        android:id="@+id/tx2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="@string/choose_your_favourite_sub_categories"
+        android:fontFamily="@font/google_sans_medium"
+        android:textSize="13sp" />
+
+
+    <TextView
+        android:layout_below="@+id/tx2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:gravity="center"
+        android:id="@+id/tx"
+        android:text="@string/to_experience_better_recommendations"
+        android:fontFamily="@font/google_sans_medium"
+        android:textSize="13sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tx"
+        android:id="@+id/rvSubCat"/>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="350dp"
+        android:id="@+id/btNext"
+        app:cornerRadius="20dp"
+        android:text="@string/next"
+        android:textAllCaps="false"
+        android:elevation="5dp"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:padding="@dimen/_5sdp"
+        android:fontFamily="@font/google_sans_medium"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:layout_height="50dp">
+
+    </com.google.android.material.button.MaterialButton>
+</RelativeLayout>

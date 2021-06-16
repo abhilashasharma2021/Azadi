@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".activity.MainActivity">
+
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+    </FrameLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/rlCard"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:layout_height="wrap_content">
+
+
+
+
+
+        <soup.neumorphism.NeumorphCardView
+            style="@style/Widget.Neumorph.ImageButton"
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:id="@+id/card"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_height="@dimen/_55sdp"
+            android:scaleType="centerInside"
+            app:neumorph_shapeType="flat">
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:layout_width="match_parent"
+                android:id="@+id/bottom_navigation"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                app:itemIconSize="@dimen/_24sdp"
+                app:itemIconTint="@color/black"
+                android:background="@color/background"
+                app:menu="@menu/menu"
+
+                >
+
+            </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+        </soup.neumorphism.NeumorphCardView>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_height="wrap_content">
+            <soup.neumorphism.NeumorphFloatingActionButton
+                android:id="@+id/fab"
+                style="@style/Widget.Neumorph.FloatingActionButton"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerHorizontal="true"
+                android:scaleType="centerInside"
+                app:neumorph_shapeType="flat"
+                android:src="@drawable/add"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>
