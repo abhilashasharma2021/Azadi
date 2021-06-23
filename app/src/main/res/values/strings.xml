@@ -25,6 +25,8 @@
     <string name="next">Next</string>
     <string name="to_experience_better_recommendations">to experience better recommendations</string>
     <string name="sub_category">Sub Category</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

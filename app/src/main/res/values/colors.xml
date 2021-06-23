@@ -9,11 +9,15 @@
     <color name="white">#FFFFFFFF</color>
     <color name="back">#FAFAFA</color>
     <color name="red">#CC1D10</color>
+    <color name="pink">#f83255</color>
+    <color name="grey">#736F6F</color>
+    <color name="greyOne">#CCCBCB</color>
 
 
     <!--custom color-->
     <color name="primary">#2D7DF6</color>
     <color name="background">#E4EBE5</color>
+    <color name="transparent">#E4EBE5</color>
     <color name="primary_text">#0B0D0C</color>
     <color name="seconday_text">#7D818A</color>
     <color name="dark_shadow">#E4EBE5</color>

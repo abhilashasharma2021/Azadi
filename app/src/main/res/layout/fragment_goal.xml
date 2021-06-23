@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.GoalFrag">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@+id/viewPager"
+        android:layout_marginTop="10dp"
+        android:id="@+id/txChallenge"
+        android:fontFamily="@font/google_sans_medium"
+        android:text="Activity Challenges"
+        android:textStyle="bold"
+        android:textColor="@color/grey"
+        android:textSize="14sp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/llMian1"
+        android:layout_below="@+id/txChallenge"
+        android:orientation="vertical">
+
+
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/card"
+
+            style="@style/Widget.Neumorph.ImageButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="5dp"
+            android:scaleType="centerInside"
+            app:neumorph_shapeType="flat">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/txShare"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/google_sans_medium"
+                    android:text="Villa in London"
+                    android:layout_marginStart="15dp"
+                    android:textColor="@color/grey"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:visibility="visible"
+                    android:layout_marginTop="5dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="25dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_centerVertical="true"
+                    app:cardBackgroundColor="@color/background"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="5dp">
+
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/rightarrow" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+
+            </RelativeLayout>
+
+
+        </soup.neumorphism.NeumorphCardView>
+
+
+
+
+        <soup.neumorphism.NeumorphCardView
+            style="@style/Widget.Neumorph.ImageButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:scaleType="centerInside"
+            app:neumorph_shapeType="flat">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/google_sans_medium"
+                    android:text="Gold Medal in Nationals"
+                    android:layout_marginStart="15dp"
+                    android:textColor="@color/grey"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:visibility="visible"
+                    android:layout_marginTop="5dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="25dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_centerVertical="true"
+                    app:cardBackgroundColor="@color/background"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="5dp">
+
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/rightarrow" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+
+            </RelativeLayout>
+
+
+        </soup.neumorphism.NeumorphCardView>
+
+
+
+
+        <soup.neumorphism.NeumorphCardView
+            style="@style/Widget.Neumorph.ImageButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:scaleType="centerInside"
+            app:neumorph_shapeType="flat">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/google_sans_medium"
+                    android:text="World Tour"
+                    android:layout_marginStart="15dp"
+                    android:textColor="@color/grey"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:visibility="visible"
+                    android:layout_marginTop="5dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="25dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_centerVertical="true"
+                    app:cardBackgroundColor="@color/background"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="5dp">
+
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/rightarrow" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+
+            </RelativeLayout>
+
+
+        </soup.neumorphism.NeumorphCardView>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginEnd="15dp"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="80dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="20dp"
+
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="5dp"
+                app:cardBackgroundColor="@color/background"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/google_sans_medium"
+                    android:text="+ Add More"
+                    android:textColor="@color/grey"
+                    android:textSize="10sp" />
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/google_sans_medium"
+            android:textStyle="normal"
+            android:textSize="10sp"
+            android:textColor="#818386"
+            android:lineSpacingExtra="3sp"
+            android:gravity="center_horizontal"
+            tools:text="“People do not only talk about successes, they talk about people
+who overcame their challenges or disabilities. Others are inspired
+when you are able to overcome your challenges.”"
+            />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="2"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rlSelect"
+                    >
+
+                    <ImageView
+                        android:id="@+id/image"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/girl" />
+
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:layout_height="180dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/girl" />
+
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>

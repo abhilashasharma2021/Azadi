@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".activity.ShowPostActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="5dp"
+            app:cardBackgroundColor="@color/background"
+            app:cardElevation="5dp">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical">
+
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:visibility="visible"
+                    android:id="@+id/ivBack"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginBottom="2dp"
+                    app:cardBackgroundColor="@color/background"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="5dp">
+
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/leftarrow" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:id="@+id/txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/google_sans_medium"
+                    android:text="az-adi"
+                    android:textColor="@color/purple_200"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:visibility="gone"
+                    android:layout_marginBottom="2dp"
+                    android:layout_toLeftOf="@+id/cdProfile"
+                    app:cardBackgroundColor="@color/background"
+                    app:cardCornerRadius="25dp"
+                    app:cardElevation="5dp">
+
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+
+                        android:layout_gravity="center"
+                        android:src="@drawable/arrow" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cdProfile"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="2dp"
+                    android:visibility="gone"
+                    app:cardBackgroundColor="@color/background"
+                    app:cardCornerRadius="25dp"
+                    app:cardElevation="5dp">
+
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/profileimg" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:layout_marginTop="50dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/running" />
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardIv"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="2dp"
+                app:cardBackgroundColor="@color/background"
+                app:cardCornerRadius="30dp"
+                app:cardElevation="5dp">
+
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/profileimg" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <TextView
+                android:id="@+id/txName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/cardIv"
+                android:fontFamily="@font/google_sans_medium"
+                android:text="Mela Maysura"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txName"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_toRightOf="@+id/cardIv"
+                android:fontFamily="@font/google_sans_medium"
+                android:text="2 hours ago"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/flat_image_view"
+                android:layout_width="80dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                app:cardBackgroundColor="@color/background"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/google_sans_medium"
+                    android:text="Follow"
+                    android:textColor="@color/black"
+                    android:textSize="10sp" />
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical">
+
+
+            <soup.neumorphism.NeumorphCardView
+                android:id="@+id/cardgoogle"
+                style="@style/Widget.Neumorph.ImageButton"
+                android:layout_width="@dimen/_155sdp"
+                android:layout_height="@dimen/_38sdp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:scaleType="centerInside"
+                app:neumorph_shapeType="flat">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/ivLike"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:padding="3dp"
+                        android:src="@drawable/like" />
+
+                    <TextView
+                        android:id="@+id/txLike"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/ivLike"
+                        android:fontFamily="@font/google_sans_medium"
+                        android:text="362"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+
+                    <ImageView
+                        android:id="@+id/ivComment"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_toRightOf="@+id/txLike"
+                        android:padding="3dp"
+                        android:src="@drawable/chat" />
+
+                    <TextView
+                        android:id="@+id/txComment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/ivComment"
+                        android:fontFamily="@font/google_sans_medium"
+                        android:text="42"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/ivShare"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_toRightOf="@+id/txComment"
+                        android:padding="3dp"
+                        android:src="@drawable/share" />
+
+                    <TextView
+                        android:id="@+id/txShare"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/ivShare"
+                        android:fontFamily="@font/google_sans_medium"
+                        android:text="5"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+
+                </RelativeLayout>
+
+
+            </soup.neumorphism.NeumorphCardView>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="3dp"
+                app:cardBackgroundColor="@color/background"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="5dp">
+
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/dots" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/google_sans_medium"
+            android:lineSpacingExtra="2dp"
+            android:textColor="#313131"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:text="Whether that love is new love or decade. Australia, \n
+officially known as the Commonwealth of Australia, is a sovereign country \n comprising the mainland of the Australian continent." />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/google_sans_medium"
+            android:lineSpacingExtra="4sp"
+            android:textColor="@color/pink"
+            android:textSize="10sp"
+
+            android:textStyle="bold"
+            android:text="#traveldiaries #india #oberoiudaivilas #jaipur" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="#dbdbdb" />
+
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:layout_marginTop="50dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/running" />
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardIv1"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="2dp"
+                app:cardBackgroundColor="@color/background"
+                app:cardCornerRadius="30dp"
+                app:cardElevation="5dp">
+
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/profileimg" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <TextView
+                android:id="@+id/txName1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/cardIv1"
+                android:fontFamily="@font/google_sans_medium"
+                android:text="Mela Maysura"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txName1"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_toRightOf="@+id/cardIv1"
+                android:fontFamily="@font/google_sans_medium"
+                android:text="2 hours ago"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/flat_image_view1"
+                android:layout_width="80dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                app:cardBackgroundColor="@color/background"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/google_sans_medium"
+                    android:text="Follow"
+                    android:textColor="@color/black"
+                    android:textSize="10sp" />
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical">
+
+
+            <soup.neumorphism.NeumorphCardView
+                android:id="@+id/cardgoogle1"
+                style="@style/Widget.Neumorph.ImageButton"
+                android:layout_width="@dimen/_155sdp"
+                android:layout_height="@dimen/_38sdp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:scaleType="centerInside"
+                app:neumorph_shapeType="flat">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/ivLike1"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:padding="3dp"
+                        android:src="@drawable/like" />
+
+                    <TextView
+                        android:id="@+id/txLike1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/ivLike1"
+                        android:fontFamily="@font/google_sans_medium"
+                        android:text="362"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+
+                    <ImageView
+                        android:id="@+id/ivComment1"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_toRightOf="@+id/txLike1"
+                        android:padding="3dp"
+                        android:src="@drawable/chat" />
+
+                    <TextView
+                        android:id="@+id/txComment1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/ivComment1"
+                        android:fontFamily="@font/google_sans_medium"
+                        android:text="42"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/ivShare1"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_toRightOf="@+id/txComment1"
+                        android:padding="3dp"
+                        android:src="@drawable/share" />
+
+                    <TextView
+                        android:id="@+id/txShare1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/ivShare1"
+                        android:fontFamily="@font/google_sans_medium"
+                        android:text="5"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+
+                </RelativeLayout>
+
+
+            </soup.neumorphism.NeumorphCardView>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="3dp"
+                app:cardBackgroundColor="@color/background"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="5dp">
+
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/dots" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/google_sans_medium"
+            android:lineSpacingExtra="2dp"
+            android:textColor="#313131"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:text="Whether that love is new love or decade. Australia, \n
+officially known as the Commonwealth of Australia, is a sovereign country \n comprising the mainland of the Australian continent." />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/google_sans_medium"
+            android:lineSpacingExtra="4sp"
+            android:textColor="@color/pink"
+            android:textSize="10sp"
+
+            android:textStyle="bold"
+            android:text="#traveldiaries #india #oberoiudaivilas #jaipur" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="#dbdbdb" />
+
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

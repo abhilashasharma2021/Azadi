@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background"
+    tools:context=".fragment.HomeFrag">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                app:cardElevation="5dp"
+                 android:layout_marginBottom="5dp"
+                app:cardBackgroundColor="@color/background"
+                android:layout_height="60dp">
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="45dp"
+                    app:cardElevation="5dp"
+                    android:layout_marginBottom="2dp"
+                    app:cardCornerRadius="25dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_gravity="center_vertical"
+                    app:cardBackgroundColor="@color/background"
+                    android:layout_height="45dp">
+
+
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/setting"
+                        android:layout_gravity="center"
+                        />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:id="@+id/txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_centerVertical="true"
+                   android:layout_centerInParent="true"
+                    android:fontFamily="@font/google_sans_medium"
+                    android:textColor="@color/purple_200"
+                    android:text="az-adi"
+                    android:textStyle="bold"
+                    android:textSize="18sp" />
+
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="45dp"
+                        app:cardElevation="5dp"
+                        android:layout_toLeftOf="@+id/cdProfile"
+                        app:cardCornerRadius="25dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_gravity="center_vertical"
+                        app:cardBackgroundColor="@color/background"
+                        android:layout_height="45dp">
+
+
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:src="@drawable/arrow"
+                            android:layout_gravity="center"
+                            />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="45dp"
+                        app:cardElevation="5dp"
+                        android:id="@+id/cdProfile"
+                        android:layout_alignParentRight="true"
+                        app:cardCornerRadius="25dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_gravity="center_vertical"
+                        app:cardBackgroundColor="@color/background"
+                        android:layout_height="45dp">
+
+
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:src="@drawable/profileimg"
+                            android:layout_gravity="center"
+                            />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+<androidx.recyclerview.widget.RecyclerView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:scrollbars="vertical"
+    android:id="@+id/rvHome"/>
+
+        </LinearLayout>
+
+
+
+
+</RelativeLayout>
