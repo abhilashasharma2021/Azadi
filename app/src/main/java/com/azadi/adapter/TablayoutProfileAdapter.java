@@ -28,6 +28,7 @@ public class TablayoutProfileAdapter extends FragmentPagerAdapter {
                 Log.e("sdcscdsad", position+"" );
                 GoalFrag goalFrag = new GoalFrag();
                 return goalFrag;
+
             case 1:
                 Log.e("sdcscdsad", position+"" );
                 ChallengeFrag challengeFrag = new ChallengeFrag();
