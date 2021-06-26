@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 
 import com.azadi.R;
 import com.azadi.activity.ProfileActivity;
+import com.azadi.activity.ShowPostActivity;
 import com.azadi.adapter.HomeAdapter;
 import com.azadi.databinding.FragmentHomeBinding;
 import com.azadi.model.HomeModel;
@@ -41,7 +42,12 @@ public class HomeFrag extends Fragment {
               startActivity(new Intent(getActivity(), ProfileActivity.class));
           }
       });
-
+        binding.card1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(),ShowPostActivity.class));
+            }
+        });
 
         staggeredGridLayoutManager=new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL);
         binding.rvHome.setLayoutManager(staggeredGridLayoutManager);

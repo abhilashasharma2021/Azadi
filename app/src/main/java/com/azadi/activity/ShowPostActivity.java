@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.AnimationUtils;
@@ -27,10 +28,10 @@ public class ShowPostActivity extends AppCompatActivity {
         binding=ActivityShowPostBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        binding.ivBack.setOnClickListener(new View.OnClickListener() {
+        binding.cdMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+                startActivity(new Intent(ShowPostActivity.this,ShowGoalActivity.class));
             }
         });
 

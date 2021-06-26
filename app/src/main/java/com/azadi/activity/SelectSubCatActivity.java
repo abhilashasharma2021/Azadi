@@ -29,7 +29,7 @@ public class SelectSubCatActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         binding.rvSubCat.setHasFixedSize(true);
-        layoutManager=new GridLayoutManager(SelectSubCatActivity.this,2, RecyclerView.VERTICAL,false);
+        layoutManager=new GridLayoutManager(SelectSubCatActivity.this,3, RecyclerView.VERTICAL,false);
         binding.rvSubCat.setLayoutManager(layoutManager);
 
         binding.btNext.setOnClickListener(new View.OnClickListener() {
@@ -45,7 +45,7 @@ public class SelectSubCatActivity extends AppCompatActivity {
     private void showSubCategory(){
         SelectSubCatModel model=new SelectSubCatModel(R.drawable.running);
 
-        for (int i = 0; i <4 ; i++) {
+        for (int i = 0; i <6 ; i++) {
 
             subCatList.add(model);
 

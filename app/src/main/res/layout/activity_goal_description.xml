@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".activity.GoalDescriptionActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="5dp"
+        app:cardBackgroundColor="@color/background"
+        app:cardElevation="5dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardMenu"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="15dp"
+                android:layout_marginBottom="2dp"
+                app:cardBackgroundColor="@color/background"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="5dp">
+
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:padding="8dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/leftarrow"
+                    app:tint="@color/grey" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+            <TextView
+                android:id="@+id/txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/google_sans_medium"
+                android:text="az-adi"
+                android:textColor="@color/purple_200"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cdProfile"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="2dp"
+                app:cardBackgroundColor="@color/background"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="5dp">
+
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/profileimg" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:scaleType="fitXY"
+                android:id="@+id/ivMain"
+                android:src="@drawable/run"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@+id/ivMain"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/google_sans_medium"
+                android:textColor="@color/black"
+                android:lineSpacingExtra="1sp"
+                android:layout_marginTop="15dp"
+                android:text="Running Endurance \nChallenge"
+                android:textStyle="bold"
+                android:textSize="18sp" />
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/google_sans_medium"
+                android:textStyle="normal"
+                android:textSize="10sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:textColor="#808080"
+                android:lineSpacingExtra="1sp"
+                android:text="Run a total of 300 \nKilometers"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/google_sans_medium"
+                android:textStyle="normal"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10dp"
+                android:textSize="10sp"
+                android:textColor="#808080"
+                android:lineSpacingExtra="2sp"
+                tools:text="Sep 1 to Sep 30, 2020"/>
+
+        </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/ivMain"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:src="@drawable/star1"
+                    android:padding="5dp"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="35dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="45dp"
+                    />
+
+
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/flat_image_view1"
+                    android:layout_width="100dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="10dp"
+                    app:cardBackgroundColor="@color/background"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/google_sans_medium"
+                        android:text="28 days left"
+                        android:textColor="@color/black"
+                        android:textSize="10sp" />
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+
+
+
+
+
+
+        <ImageView
+            android:layout_width="45dp"
+            android:src="@drawable/cycling"
+            app:tint="@color/grey"
+            android:padding="5dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_height="45dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/google_sans_medium"
+            android:textStyle="normal"
+            android:textSize="12sp"
+            android:textColor="#808080"
+            android:lineSpacingExtra="0sp"
+            android:text="Of course, you can’t get started without a great set of
+wheels.  While we’re big fans of all types of bikes, we’re
+specifically talking about bikes suitable for the road here.
+This is the most common and accessible form of cycling
+for beginners."/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="4dp"
+                android:layout_toLeftOf="@+id/fab"
+                android:layout_marginTop="80dp"
+                android:background="#dbdbdb"/>
+
+
+            <soup.neumorphism.NeumorphFloatingActionButton
+                android:id="@+id/fab"
+                style="@style/Widget.Neumorph.FloatingActionButton"
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_120sdp"
+                android:layout_gravity="center"
+                android:layout_centerInParent="true"
+                android:scaleType="centerInside"
+                android:alpha="0.6"
+                app:neumorph_shapeType="basin"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" >
+
+
+
+
+
+            </soup.neumorphism.NeumorphFloatingActionButton>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardIv"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="2dp"
+                app:cardBackgroundColor="@color/background"
+                app:cardCornerRadius="45dp"
+                app:cardElevation="5dp">
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/google_sans_medium"
+                    android:text="START"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+            </com.google.android.material.card.MaterialCardView>
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="4dp"
+            android:layout_toRightOf="@+id/fab"
+            android:layout_marginTop="80dp"
+            android:background="#dbdbdb"/>
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:layout_marginTop="50dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/running" />
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardIv1"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="2dp"
+                app:cardBackgroundColor="@color/background"
+                app:cardCornerRadius="30dp"
+                app:cardElevation="5dp">
+
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/profileimg" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <TextView
+                android:id="@+id/txName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/cardIv1"
+                android:fontFamily="@font/google_sans_medium"
+                android:text="Mela Maysura"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txName"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_toRightOf="@+id/cardIv1"
+                android:fontFamily="@font/google_sans_medium"
+                android:text="2 hours ago"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+
+
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

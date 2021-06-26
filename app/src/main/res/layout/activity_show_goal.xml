@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".activity.ShowGoalActivity">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="5dp"
+        app:cardBackgroundColor="@color/background"
+        app:cardElevation="5dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardMenu"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="15dp"
+                android:layout_marginBottom="2dp"
+                app:cardBackgroundColor="@color/background"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="5dp">
+
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:padding="8dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/leftarrow"
+                    app:tint="@color/grey" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+            <TextView
+                android:id="@+id/txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/google_sans_medium"
+                android:text="az-adi"
+                android:textColor="@color/purple_200"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cdProfile"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="2dp"
+                app:cardBackgroundColor="@color/background"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="5dp">
+
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/profileimg" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_below="@+id/ll"
+        android:background="@color/greyOne"
+        android:elevation="6dp"
+        app:tabSelectedTextColor="@color/purple_200"
+        android:inputType="textCapCharacters"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:tabGravity="fill"
+        app:tabTextAppearance="@style/CustomTextAppearanceTab"
+        app:tabMode="fixed"
+        app:tabTextColor="@color/grey" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/tabLayout"/>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+
+
+
+
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/cardgoogle"
+            style="@style/Widget.Neumorph.ImageButton"
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_height="@dimen/_160sdp"
+            android:scaleType="centerInside"
+            app:neumorph_shapeType="flat" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                    android:layout_width="40dp"
+                    android:src="@drawable/gmail"
+                    android:padding="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="15dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_height="40dp">
+                    </ImageView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/google_sans_medium"
+                        android:textColor="@color/black"
+                        android:lineSpacingExtra="1sp"
+                        android:text="Running Endurance \nChallenge"
+                        android:textStyle="bold"
+                        android:textSize="13sp" />
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/google_sans_medium"
+                        android:textStyle="normal"
+                        android:textSize="10sp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:textColor="#808080"
+                        android:lineSpacingExtra="1sp"
+                        android:text="Run a total of 300 \nKilometers"/>
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/google_sans_medium"
+                        android:textStyle="normal"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="10sp"
+                        android:textColor="#808080"
+                        android:lineSpacingExtra="2sp"
+                        tools:text="Sep 1 to Sep 30, 2020"/>
+
+
+                </LinearLayout>
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/google_sans_medium"
+                            android:textStyle="normal"
+                            android:layout_gravity="end"
+                            android:layout_marginRight="15dp"
+                            android:textSize="48sp"
+                            android:textColor="#808080"
+                            android:text="28 "/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/google_sans_medium"
+                            android:textStyle="normal"
+                            android:textSize="14sp"
+                            android:layout_gravity="end"
+                            android:layout_marginRight="15dp"
+                            android:textColor="#808080"
+                            android:text="days left "/>
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:src="@drawable/cycling"
+                            app:tint="@color/grey"
+                            android:padding="5dp"
+                            android:layout_gravity="end"
+                            android:layout_marginRight="35dp"
+                            android:layout_height="40dp">
+                        </ImageView>
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/flat_image_view1"
+                            android:layout_width="100dp"
+                            android:layout_height="25dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginRight="10dp"
+                            app:cardBackgroundColor="@color/background"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/google_sans_medium"
+                                android:text="START"
+                                android:textColor="@color/black"
+                                android:textSize="10sp" />
+
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                    </LinearLayout>
+
+
+
+                </RelativeLayout>
+
+
+
+
+
+        </soup.neumorphism.NeumorphCardView>
+
+
+
+
+            <soup.neumorphism.NeumorphCardView
+                style="@style/Widget.Neumorph.ImageButton"
+                android:layout_width="match_parent"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_height="@dimen/_160sdp"
+                android:scaleType="centerInside"
+                app:neumorph_shapeType="flat" >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:src="@drawable/gmail"
+                            android:padding="5dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_height="40dp">
+                        </ImageView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/google_sans_medium"
+                            android:textStyle="normal"
+                            android:textSize="14sp"
+                            android:textColor="#000000"
+                            android:lineSpacingExtra="3sp"
+                            android:text="Swimming Butterfly \n100 m"/>
+
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/google_sans_medium"
+                            android:textStyle="normal"
+                            android:textSize="10sp"
+                            android:layout_marginTop="10dp"
+                            android:textColor="#808080"
+                            android:lineSpacingExtra="1sp"
+                            tools:text="100 m Butterfly \nswimmingchallenge"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/google_sans_medium"
+                            android:textStyle="normal"
+                            android:layout_marginTop="10dp"
+                            android:textSize="10sp"
+                            android:textColor="#808080"
+                            android:lineSpacingExtra="2sp"
+                            tools:text="Nov 1 to Dec 30, 2020"/>
+                    </LinearLayout>
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/google_sans_medium"
+                            android:textStyle="normal"
+                            android:layout_gravity="end"
+                            android:layout_marginRight="20dp"
+                            android:textSize="48sp"
+                            android:textColor="#808080"
+                            android:text="04 "/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/google_sans_medium"
+                            android:textStyle="normal"
+                            android:textSize="14sp"
+                            android:layout_gravity="end"
+                            android:layout_marginRight="20dp"
+                            android:textColor="#808080"
+                            android:text="days left "/>
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:src="@drawable/cycling"
+                            app:tint="@color/grey"
+                            android:padding="5dp"
+                            android:layout_gravity="end"
+                            android:layout_marginRight="45dp"
+                            android:layout_height="40dp">
+                        </ImageView>
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="100dp"
+                            android:layout_height="25dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginRight="10dp"
+                            app:cardBackgroundColor="@color/background"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/google_sans_medium"
+                                android:text="START"
+                                android:textColor="@color/black"
+                                android:textSize="10sp" />
+
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                    </LinearLayout>
+
+
+
+                </RelativeLayout>
+
+
+
+
+
+            </soup.neumorphism.NeumorphCardView>
+            <soup.neumorphism.NeumorphCardView
+                style="@style/Widget.Neumorph.ImageButton"
+                android:layout_width="match_parent"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_height="@dimen/_160sdp"
+                android:scaleType="centerInside"
+                app:neumorph_shapeType="flat" >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:src="@drawable/gmail"
+                            android:padding="5dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_height="40dp">
+                        </ImageView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/google_sans_medium"
+                            android:textStyle="normal"
+                            android:textSize="14sp"
+                            android:textColor="#000000"
+                            android:lineSpacingExtra="3sp"
+                            android:text="Exam Preparation \nB.tech"/>
+
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/google_sans_medium"
+                            android:textStyle="normal"
+                            android:textSize="10sp"
+                            android:layout_marginTop="10dp"
+                            android:textColor="#808080"
+                            android:lineSpacingExtra="1sp"
+                            tools:text="Course complete before \noct 12th, 2020"/>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/google_sans_medium"
+                            android:textStyle="normal"
+                            android:layout_marginTop="10dp"
+                            android:textSize="10sp"
+                            android:textColor="#808080"
+                            android:lineSpacingExtra="2sp"
+                            tools:text="Sep 10 to Oct 12, 2020"/>
+                    </LinearLayout>
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/google_sans_medium"
+                            android:textStyle="normal"
+                            android:layout_gravity="end"
+                            android:layout_marginRight="20dp"
+                            android:textSize="48sp"
+                            android:textColor="#808080"
+                            android:text="12 "/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/google_sans_medium"
+                            android:textStyle="normal"
+                            android:textSize="14sp"
+                            android:layout_gravity="end"
+                            android:layout_marginRight="20dp"
+                            android:textColor="#808080"
+                            android:text="days left "/>
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:src="@drawable/cycling"
+                            app:tint="@color/grey"
+                            android:padding="5dp"
+                            android:layout_gravity="end"
+                            android:layout_marginRight="40dp"
+                            android:layout_height="40dp">
+                        </ImageView>
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="100dp"
+                            android:layout_height="25dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginRight="10dp"
+                            app:cardBackgroundColor="@color/background"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/google_sans_medium"
+                                android:text="START"
+                                android:textColor="@color/black"
+                                android:textSize="10sp" />
+
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                    </LinearLayout>
+
+
+
+                </RelativeLayout>
+
+
+
+
+
+            </soup.neumorphism.NeumorphCardView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
+</RelativeLayout>

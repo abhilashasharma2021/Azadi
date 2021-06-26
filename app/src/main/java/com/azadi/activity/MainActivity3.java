@@ -1,32 +1,21 @@
 package com.azadi.activity;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.azadi.R;
-import com.azadi.databinding.ActivityMainBinding;
-import com.azadi.fragment.HomeFrag;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.ramotion.circlemenu.CircleMenuView;
 
-public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
-    ActivityMainBinding binding;
+public class MainActivity3 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
-
-        if (savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFrag()).commit();
-        }
+        setContentView(R.layout.activity_main3);
 
 
         final CircleMenuView menu = findViewById(R.id.circle_menu);
@@ -77,29 +66,5 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 Log.d("D", "onButtonLongClickAnimationEnd| index: " + index);
             }
         });
-
-
-
-
-        binding.fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFrag()).commit();
-            }
-        });
-
-
-    }
-
-    @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-
-        switch (item.getItemId()) {
-
-            case R.id.home:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFrag()).commit();
-                break;
-        }
-        return true;
     }
 }

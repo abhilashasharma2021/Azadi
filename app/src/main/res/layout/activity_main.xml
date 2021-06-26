@@ -19,6 +19,12 @@
         android:layout_alignParentBottom="true"
         android:layout_height="wrap_content">
 
+
+
+
+
+
+
         <com.google.android.material.card.MaterialCardView
                 android:id="@+id/card"
                 android:layout_width="match_parent"
@@ -29,6 +35,10 @@
                 app:cardMaxElevation="5dp"
                 android:layout_marginBottom="28dp"
                 app:cardElevation="4dp">
+
+
+
+
 
                 <com.google.android.material.bottomnavigation.BottomNavigationView
                     android:id="@+id/bottomNavigation"
@@ -49,11 +59,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="25dp"
+        android:layout_marginTop="10dp"
         android:layout_alignParentBottom="true"
         android:visibility="visible">
 
         <soup.neumorphism.NeumorphFloatingActionButton
             android:id="@+id/fab"
+            android:visibility="visible"
             style="@style/Widget.Neumorph.FloatingActionButton"
             android:layout_width="60dp"
             android:layout_height="60dp"
@@ -61,6 +73,20 @@
             android:scaleType="centerInside"
             android:src="@drawable/add"
             app:neumorph_shapeType="flat" />
+
+
+        <com.ramotion.circlemenu.CircleMenuView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:visibility="gone"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/circle_menu"
+            app:button_colors="@array/bottom_bar_colors"
+            app:button_icons="@array/bottom_bar_icons" />
+
+
+
+
     </RelativeLayout>
 
 

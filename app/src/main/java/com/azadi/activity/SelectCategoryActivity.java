@@ -28,7 +28,7 @@ public class SelectCategoryActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         binding.rvCat.setHasFixedSize(true);
-        layoutManager=new GridLayoutManager(SelectCategoryActivity.this,2, RecyclerView.VERTICAL,false);
+        layoutManager=new GridLayoutManager(SelectCategoryActivity.this,3, RecyclerView.VERTICAL,false);
         binding.rvCat.setLayoutManager(layoutManager);
 
         catList=new ArrayList<>();
@@ -47,7 +47,7 @@ public class SelectCategoryActivity extends AppCompatActivity {
     private void showCategory(){
         SelectCatModel model=new SelectCatModel(R.drawable.running);
 
-        for (int i = 0; i <4 ; i++) {
+        for (int i = 0; i <6 ; i++) {
 
             catList.add(model);
 

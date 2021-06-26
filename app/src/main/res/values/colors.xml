@@ -9,6 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="back">#FAFAFA</color>
     <color name="red">#CC1D10</color>
+    <color name="redtrans">#74CC1D10</color>
     <color name="pink">#f83255</color>
     <color name="grey">#736F6F</color>
     <color name="greyOne">#CCCBCB</color>

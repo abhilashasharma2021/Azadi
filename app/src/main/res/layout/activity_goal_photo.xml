@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".activity.GoalPhotoActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="5dp"
+        app:cardBackgroundColor="@color/background"
+        app:cardElevation="5dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardMenu"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="15dp"
+                android:layout_marginBottom="2dp"
+                app:cardBackgroundColor="@color/background"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="5dp">
+
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:padding="8dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/leftarrow"
+                    app:tint="@color/grey" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+            <TextView
+                android:id="@+id/txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/google_sans_medium"
+                android:text="az-adi"
+                android:textColor="@color/purple_200"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cdProfile"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="2dp"
+                app:cardBackgroundColor="@color/background"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="5dp">
+
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/profileimg" />
+
+            </com.google.android.material.card.MaterialCardView>
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_centerVertical="true"
+        android:fontFamily="@font/google_sans_medium"
+        android:textColor="@color/grey"
+        android:lineSpacingExtra="1sp"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center"
+        android:text="Running Endurance Challenge"
+        android:textSize="17sp" />
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+
+
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/edittext_card"
+            style="@style/Widget.Neumorph.CardView"
+            android:layout_width="@dimen/_130sdp"
+            android:layout_height="@dimen/_130sdp"
+            android:layout_marginTop="24dp"
+            android:layout_centerInParent="true"
+            app:neumorph_shapeType="pressed"
+            app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                app:cardBackgroundColor="@color/background"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="5dp">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_gravity="center_vertical"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="45dp"
+        android:layout_height="35dp"
+        android:id="@+id/iv"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:src="@drawable/upload"
+        app:tint="@color/grey" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/google_sans_medium"
+        android:text="choose a file"
+        android:layout_below="@+id/iv"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="@color/grey"
+        android:textSize="10sp" />
+
+</RelativeLayout>
+
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+        </soup.neumorphism.NeumorphCardView>
+
+
+
+
+    </RelativeLayout>
+
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/cardgoogle"
+            style="@style/Widget.Neumorph.ImageButton"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_height="@dimen/_40sdp"
+            android:scaleType="centerInside"
+            app:neumorph_shapeType="flat" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/google_sans_medium"
+                    android:textColor="@color/grey"
+                    android:text="Duration"
+                    android:textStyle="bold"
+                    android:textSize="13sp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:fontFamily="@font/google_sans_medium"
+                    android:textColor="@color/black"
+                    android:text="07:35:10 "
+                    android:textStyle="bold"
+                    android:textSize="13sp" />
+
+
+
+
+            </RelativeLayout>
+
+
+        </soup.neumorphism.NeumorphCardView>
+
+        <soup.neumorphism.NeumorphCardView
+        style="@style/Widget.Neumorph.ImageButton"
+        android:layout_width="match_parent"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_height="@dimen/_40sdp"
+        android:scaleType="centerInside"
+        app:neumorph_shapeType="flat" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/google_sans_medium"
+                android:textColor="@color/grey"
+                android:text="Distance"
+                android:textStyle="bold"
+                android:textSize="13sp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/txKm"
+                android:fontFamily="@font/google_sans_medium"
+                android:textColor="@color/black"
+                android:text="75.8 "
+                android:textStyle="bold"
+                android:textSize="13sp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:id="@+id/txKm"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/google_sans_medium"
+                android:textColor="@color/grey"
+                android:text="km "
+                android:textStyle="bold"
+                android:textSize="10sp" />
+
+        </RelativeLayout>
+
+
+    </soup.neumorphism.NeumorphCardView>
+
+
+
+
+    <soup.neumorphism.NeumorphCardView
+        style="@style/Widget.Neumorph.ImageButton"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_height="@dimen/_110sdp"
+        android:scaleType="centerInside"
+        app:neumorph_shapeType="pressed" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:weightSum="2"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/google_sans_medium"
+                    android:textStyle="normal"
+                    android:textSize="18sp"
+                    android:textColor="@color/grey"
+                    android:lineSpacingExtra="3sp"
+                    android:text="Elevation "/>
+
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="@dimen/_15ssp"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/google_sans_medium"
+                        android:textColor="@color/black"
+                        android:text="75.8 "
+                        android:id="@+id/tx1"
+                        android:textStyle="bold"
+                        android:textSize="15sp" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:id="@+id/tx"
+                        android:layout_toRightOf="@+id/tx1"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/google_sans_medium"
+                        android:textColor="@color/grey"
+                        android:text="m "
+                        android:textStyle="bold"
+                        android:textSize="15sp" />
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_margin="10dp"
+                android:background="#dbdbdb"/>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/google_sans_medium"
+                    android:textStyle="normal"
+                    android:textSize="18sp"
+                    android:textColor="@color/grey"
+                    android:lineSpacingExtra="3sp"
+                    android:text="pace"/>
+
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="@dimen/_15ssp"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/google_sans_medium"
+                        android:textColor="@color/black"
+                        android:text="4 : 5"
+                        android:id="@+id/tx3"
+                        android:textStyle="bold"
+                        android:textSize="15sp" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/tx3"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/google_sans_medium"
+                        android:textColor="@color/grey"
+                        android:text="/km "
+                        android:textStyle="bold"
+                        android:textSize="15sp" />
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </soup.neumorphism.NeumorphCardView>
+
+
+
+
+
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+
+        <soup.neumorphism.NeumorphFloatingActionButton
+            style="@style/Widget.Neumorph.FloatingActionButton"
+            android:id="@+id/fab1"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_gravity="center"
+            android:layout_centerInParent="true"
+            android:scaleType="centerInside"
+            android:alpha="0.6"
+            app:neumorph_shapeType="basin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" >
+
+
+
+
+
+        </soup.neumorphism.NeumorphFloatingActionButton>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardIv"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="2dp"
+            app:cardBackgroundColor="@color/background"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="5dp">
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/google_sans_medium"
+                android:text="POST"
+                android:textColor="@color/red"
+                android:textSize="14sp" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+    </RelativeLayout>
+
+
+    </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

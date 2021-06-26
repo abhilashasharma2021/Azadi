@@ -14,7 +14,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="180dp"
             android:id="@+id/rlSelect"
             >
 
@@ -26,7 +26,19 @@
                 android:src="@drawable/images" />
 
 
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="15dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="bottom"
+                android:src="@drawable/star"/>
+
         </RelativeLayout>
+
+
 
     </com.google.android.material.card.MaterialCardView>
 

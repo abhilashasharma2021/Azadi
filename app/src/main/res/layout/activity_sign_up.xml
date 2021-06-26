@@ -19,10 +19,12 @@
             <soup.neumorphism.NeumorphFloatingActionButton
                 android:id="@+id/fab"
                 style="@style/Widget.Neumorph.FloatingActionButton"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_120sdp"
+                android:layout_marginTop="@dimen/_30sdp"
                 android:layout_gravity="center"
                 android:scaleType="centerInside"
+                android:alpha="0.6"
                 app:neumorph_shapeType="pressed"
                 android:src="@drawable/bird"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -36,6 +38,7 @@
                 android:layout_width="35dp"
                 android:layout_gravity="center"
                 android:layout_height="35dp"
+
                 android:layout_marginTop="-30dp"
                 android:src="@drawable/plus"
                 />
@@ -43,14 +46,14 @@
             <soup.neumorphism.NeumorphCardView
                 style="@style/Widget.Neumorph.CardView"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/_48sdp"
                 android:layout_marginStart="25dp"
                 android:layout_marginEnd="25dp"
                 app:neumorph_shapeType="pressed">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="45dp"
+                    android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:gravity="center">
 
@@ -77,14 +80,14 @@
             <soup.neumorphism.NeumorphCardView
                 style="@style/Widget.Neumorph.CardView"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/_48sdp"
                 android:layout_marginStart="25dp"
                 android:layout_marginEnd="25dp"
                 app:neumorph_shapeType="pressed">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="45dp"
+                    android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:gravity="center">
 
@@ -110,7 +113,7 @@
             <soup.neumorphism.NeumorphCardView
                 style="@style/Widget.Neumorph.CardView"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/_48sdp"
                 android:layout_marginStart="25dp"
                 android:layout_marginEnd="25dp"
                 app:neumorph_shapeType="pressed">
@@ -147,7 +150,7 @@
             <soup.neumorphism.NeumorphCardView
                 style="@style/Widget.Neumorph.CardView"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/_48sdp"
                 android:layout_marginStart="25dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="25dp"
@@ -155,7 +158,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="45dp"
+                    android:layout_height="match_parent"
                     android:gravity="center">
 
                     <EditText
@@ -181,7 +184,7 @@
             <soup.neumorphism.NeumorphCardView
                 style="@style/Widget.Neumorph.CardView"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/_48sdp"
                 android:layout_marginStart="25dp"
                 android:layout_marginEnd="25dp"
                 app:neumorph_shapeType="pressed">
@@ -195,7 +198,7 @@
                     <EditText
                         android:id="@+id/editPassword"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_marginStart="12dp"
                         android:layout_marginEnd="12dp"
                         android:background="@null"
@@ -215,14 +218,14 @@
             <soup.neumorphism.NeumorphCardView
                 style="@style/Widget.Neumorph.CardView"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/_48sdp"
                 android:layout_marginStart="25dp"
                 android:layout_marginEnd="25dp"
                 app:neumorph_shapeType="pressed">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="45dp"
+                    android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:gravity="center">
 
