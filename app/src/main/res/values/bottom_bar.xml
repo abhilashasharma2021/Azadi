@@ -3,14 +3,18 @@
 
 
     <array name="bottom_bar_icons">
-        <item>@drawable/location</item>
-        <item>@drawable/location</item>
-        <item>@drawable/location</item>
+        <item>@drawable/anym</item>
+        <item>@drawable/challenge</item>
+        <item>@drawable/goal</item>
+        <item>@drawable/club</item>
+        <item>@drawable/setting</item>
     </array>
 
     <array name="bottom_bar_colors">
-        <item>#FFFFFF</item>
-        <item>#FFFFFF</item>
-        <item>#FFFFFF</item>
+        <item>#E4EBE5</item>
+        <item>#E4EBE5</item>
+        <item>#E4EBE5</item>
+        <item>#E4EBE5</item>
+        <item>#E4EBE5</item>
     </array>
 </resources>

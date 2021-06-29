@@ -23,15 +23,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.azadi.R;
-import com.azadi.databinding.ActivityGoalDescriptionBinding;
-import com.azadi.databinding.ActivityGoalTimerBinding;
 
-import soup.neumorphism.NeumorphFloatingActionButton;
-
-public class GoalTimerActivity extends AppCompatActivity implements SensorEventListener {
-ActivityGoalTimerBinding binding;
-
-
+public class TrackStepsAndCalculateRunningDistanceActivity extends AppCompatActivity implements SensorEventListener {
     //Sensor related variables
     private SensorManager sensorManager;
     private Sensor stepDetectorSensor;
@@ -66,20 +59,18 @@ ActivityGoalTimerBinding binding;
     private SharedPreferences sharedPreferences;
     private int dayStepRecord;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding= ActivityGoalTimerBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
-
-        binding.ivMap.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(GoalTimerActivity.this,GoalMapActivity.class));
-            }
-        });
-
+        setContentView(R.layout.activity_track_steps_and_calculate_running_distance);
+        dayRecordText = (TextView) findViewById(R.id.dayRecordText);
+        stepText = (TextView) findViewById(R.id.stepText);
+        timeText = (TextView) findViewById(R.id.timeText);
+        speedText = (TextView) findViewById(R.id.speedText);
+        distanceText = (TextView)findViewById(R.id.distanceText);
+        orientationText = (TextView) findViewById(R.id.orientationText);
+        achievedText = (TextView) findViewById(R.id.achievedText);
+        iv_back =findViewById(R.id.iv_back);
 
 
         sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
@@ -90,32 +81,17 @@ ActivityGoalTimerBinding binding;
         if (stepDetectorSensor == null)
             showErrorDialog();
 
-        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(GoalTimerActivity.this);
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(TrackStepsAndCalculateRunningDistanceActivity.this);
 
 
-
+        iv_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+              /*  startActivity(new Intent(this, HomeActivity.class));
+                ((getActivity())).finish();*/
+            }
+        });
         setViewDefaultValues();
-
-
-        if (!active) {
-
-            sensorManager.registerListener(GoalTimerActivity.this, stepDetectorSensor, SensorManager.SENSOR_DELAY_NORMAL);
-            sensorManager.registerListener(GoalTimerActivity.this, accelerometer, SensorManager.SENSOR_DELAY_NORMAL);
-            sensorManager.registerListener(GoalTimerActivity.this, magnetometer, SensorManager.SENSOR_DELAY_NORMAL);
-            startTime = SystemClock.uptimeMillis();
-            handler.postDelayed(timerRunnable, 0);
-            active = true;
-
-        } else {
-
-            sensorManager.unregisterListener(GoalTimerActivity.this, stepDetectorSensor);
-            sensorManager.unregisterListener(GoalTimerActivity.this, accelerometer);
-            sensorManager.unregisterListener(GoalTimerActivity.this, magnetometer);
-            elapsedTime += timeInMilliseconds;
-            handler.removeCallbacks(timerRunnable);
-            active = false;
-        }
-
 
         //Step counting and other calculations start when user presses "start" button
         final Button startButton = (Button) findViewById(R.id.startButton);
@@ -123,13 +99,32 @@ ActivityGoalTimerBinding binding;
             startButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    if (!active) {
+                        startButton.setText(R.string.pause);
+                        startButton.setBackgroundColor(ContextCompat.getColor(TrackStepsAndCalculateRunningDistanceActivity.this, R.color.grey));
+                        sensorManager.registerListener(TrackStepsAndCalculateRunningDistanceActivity.this, stepDetectorSensor, SensorManager.SENSOR_DELAY_NORMAL);
+                        sensorManager.registerListener(TrackStepsAndCalculateRunningDistanceActivity.this, accelerometer, SensorManager.SENSOR_DELAY_NORMAL);
+                        sensorManager.registerListener(TrackStepsAndCalculateRunningDistanceActivity.this, magnetometer, SensorManager.SENSOR_DELAY_NORMAL);
+                        startTime = SystemClock.uptimeMillis();
+                        handler.postDelayed(timerRunnable, 0);
+                        active = true;
 
+                    } else {
+                        startButton.setText(R.string.start);
+                        startButton.setBackgroundColor(ContextCompat.getColor(TrackStepsAndCalculateRunningDistanceActivity.this, R.color.grey));
+                        sensorManager.unregisterListener(TrackStepsAndCalculateRunningDistanceActivity.this, stepDetectorSensor);
+                        sensorManager.unregisterListener(TrackStepsAndCalculateRunningDistanceActivity.this, accelerometer);
+                        sensorManager.unregisterListener(TrackStepsAndCalculateRunningDistanceActivity.this, magnetometer);
+                        elapsedTime += timeInMilliseconds;
+                        handler.removeCallbacks(timerRunnable);
+                        active = false;
+                    }
                 }
             });
         }
 
-       //Reset all calculations to 0
-        NeumorphFloatingActionButton resetButton = (NeumorphFloatingActionButton)findViewById(R.id.fab1);
+        //Reset all calculations to 0
+        Button resetButton = (Button)findViewById(R.id.resetButton);
         resetButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -140,32 +135,34 @@ ActivityGoalTimerBinding binding;
             }
         });
 
-      /*  //Opens SettingsActivity where user can set the step record of the day
+        //Opens SettingsActivity where user can set the step record of the day
         Button settingsButton = (Button) findViewById(R.id.settingsButton);
         settingsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(GoalTimerActivity.this, ProfileActivity.class);
+                Intent intent = new Intent(TrackStepsAndCalculateRunningDistanceActivity.this, ProfileActivity.class);
                 startActivity(intent);
             }
         });
-*/
+
 
 
     }
-
     @SuppressLint("StringFormatMatches")
     private void setViewDefaultValues() {
-        binding.timeText.setText(String.format(getResources().getString(R.string.time), "0:00:00"));
-        binding. distanceText.setText(String.format(getResources().getString(R.string.distance), 0));
+        stepText.setText(String.format(getResources().getString(R.string.steps), 0));
+        timeText.setText(String.format(getResources().getString(R.string.time), "0:00:00"));
+        speedText.setText(String.format(getResources().getString(R.string.speed), 0));
+        distanceText.setText(String.format(getResources().getString(R.string.distance), 0));
+        orientationText.setText(String.format(getResources().getString(R.string.orientation), ""));
     }
 
 
     @Override
     public void onResume() {
         super.onResume();
-        /*  dayStepRecord = sharedPreferences.getInt(ProfileActivity.DAY_STEP_RECORD, 3) * 1000;*/
-       /* dayRecordText.setText(String.format(getResources().getString(R.string.record), dayStepRecord));*/
+      /*  dayStepRecord = sharedPreferences.getInt(ProfileActivity.DAY_STEP_RECORD, 3) * 1000;*/
+        dayRecordText.setText(String.format(getResources().getString(R.string.record), dayStepRecord));
     }
 
 
@@ -214,17 +211,18 @@ ActivityGoalTimerBinding binding;
     }
 
 
+
     //Calculates the number of steps and the other calculations related to them
     private void countSteps(float step) {
 
         //Step count
         stepCount += (int) step;
-        binding.stepText.setText(String.format(getResources().getString(R.string.steps), stepCount));
+     stepText.setText(String.format(getResources().getString(R.string.steps), stepCount));
 
         //Distance calculation
         distance = stepCount * 0.8; //Average step length in an average adult
         String distanceString = String.format("%.2f", distance);
-        binding.distanceText.setText(String.format(getResources().getString(R.string.distance), distanceString));
+        distanceText.setText(String.format(getResources().getString(R.string.distance), distanceString));
 
         //Record achievement
         if (stepCount >= dayStepRecord)
@@ -254,7 +252,7 @@ ActivityGoalTimerBinding binding;
         } else {
             compassOrientation = "West";
         }
-       /* orientationText.setText(String.format(getResources().getString(R.string.orientation), compassOrientation));*/
+        orientationText.setText(String.format(getResources().getString(R.string.orientation), compassOrientation));
     }
 
 
@@ -273,7 +271,7 @@ ActivityGoalTimerBinding binding;
             minutes = minutes % 60;
 
             String timeString = String.format("%d:%s:%s", hours, String.format("%02d", minutes), String.format("%02d", seconds));
-            binding.timeText.setText(String.format(getResources().getString(R.string.time), timeString));
+            timeText.setText(String.format(getResources().getString(R.string.time), timeString));
           /*  if (isAdded()) {
 
             }*/
@@ -284,13 +282,13 @@ ActivityGoalTimerBinding binding;
 
     //Shown when necessary censors are not available
     private void showErrorDialog() {
-        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(GoalTimerActivity.this);
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(TrackStepsAndCalculateRunningDistanceActivity.this);
         alertDialogBuilder.setMessage("Necessary step sensors not available!");
 
         alertDialogBuilder.setPositiveButton("Exit", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                GoalTimerActivity.this.finish();
+                TrackStepsAndCalculateRunningDistanceActivity.this.finish();
             }
         });
 

@@ -4,90 +4,55 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
     tools:context=".activity.MainActivity">
-
-
     <FrameLayout
         android:id="@+id/fragment_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
-
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_alignParentBottom="true"
-        android:layout_height="wrap_content">
-
-
-
-
-
-
-
-        <com.google.android.material.card.MaterialCardView
+           <com.google.android.material.card.MaterialCardView
                 android:id="@+id/card"
+                android:layout_alignParentBottom="true"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 app:cardCornerRadius="25dp"
-                app:cardMaxElevation="5dp"
-                android:layout_marginBottom="28dp"
+               app:cardMaxElevation="5dp"
+                android:layout_marginBottom="30dp"
                 app:cardElevation="4dp">
 
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottomNavigation"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/background"
+                app:itemIconSize="@dimen/_22sdp"
+                app:itemIconTint="@color/black"
+                app:menu="@menu/menu">
+
+            </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+            <com.imangazaliev.circlemenu.CircleMenu
+                android:id="@+id/fabMenu"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/background"
+                android:layout_centerHorizontal="true"
+                app:buttonColors="@array/bottom_bar_colors"
+                app:buttonIcons="@array/bottom_bar_icons"
+                app:showSelectAnimation="false"
+                app:layout_anchor="@id/bottomNavigation"
+                app:maxAngle="180"
+                app:srcCompat="@drawable/menu"
+                app:startAngle="-150" />
+           </com.google.android.material.card.MaterialCardView>
 
 
 
 
-                <com.google.android.material.bottomnavigation.BottomNavigationView
-                    android:id="@+id/bottomNavigation"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:background="@color/background"
-                    app:itemIconSize="@dimen/_22sdp"
-                    app:itemIconTint="@color/black"
-                    app:menu="@menu/menu">
-
-                </com.google.android.material.bottomnavigation.BottomNavigationView>
-
-            </com.google.android.material.card.MaterialCardView>
-
-
-    </RelativeLayout>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="25dp"
-        android:layout_marginTop="10dp"
-        android:layout_alignParentBottom="true"
-        android:visibility="visible">
-
-        <soup.neumorphism.NeumorphFloatingActionButton
-            android:id="@+id/fab"
-            android:visibility="visible"
-            style="@style/Widget.Neumorph.FloatingActionButton"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_centerHorizontal="true"
-            android:scaleType="centerInside"
-            android:src="@drawable/add"
-            app:neumorph_shapeType="flat" />
-
-
-        <com.ramotion.circlemenu.CircleMenuView
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:visibility="gone"
-            android:layout_centerHorizontal="true"
-            android:id="@+id/circle_menu"
-            app:button_colors="@array/bottom_bar_colors"
-            app:button_icons="@array/bottom_bar_icons" />
-
-
-
-
-    </RelativeLayout>
 
 
 </RelativeLayout>

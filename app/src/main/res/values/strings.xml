@@ -29,4 +29,15 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
+    <string name="steps">%1$d</string>
+    <string name="time">%1$s</string>
+    <string name="speed">Average speed: %1$d steps/min</string>
+    <string name="distance">%1$s m</string>
+    <string name="orientation">Orientation: %1$s</string>
+    <string name="settings">Settings</string>
+    <string name="start">START!</string>
+    <string name="pause">Pause</string>
+    <string name="reset">Reset</string>
+    <string name="achieved">Record Achieved!</string>
+    <string name="record">Day record: %1$d steps</string>
 </resources>

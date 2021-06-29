@@ -9,14 +9,19 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+
 import com.azadi.R;
 import com.azadi.databinding.ActivityMainBinding;
+import com.azadi.fragment.GoalFrag;
 import com.azadi.fragment.HomeFrag;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.ramotion.circlemenu.CircleMenuView;
+import com.sa90.materialarcmenu.ArcMenu;
+import com.sa90.materialarcmenu.StateChangeListener;
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
     ActivityMainBinding binding;
+    ArcMenu arcMenuAndroid;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +34,13 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         }
 
 
-        final CircleMenuView menu = findViewById(R.id.circle_menu);
+       /* BottomNavigationView bottom_navigation=findViewById(R.id.bottomNavigation);
+        bottom_navigation.setOnNavigationItemSelectedListener(this);
+
+*/
+
+
+       /* final CircleMenuView menu = findViewById(R.id.circle_menu);
         menu.setEventListener(new CircleMenuView.EventListener() {
             @Override
             public void onMenuOpenAnimationStart(@NonNull CircleMenuView view) {
@@ -76,30 +87,34 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
             public void onButtonLongClickAnimationEnd(@NonNull CircleMenuView view, int index) {
                 Log.d("D", "onButtonLongClickAnimationEnd| index: " + index);
             }
-        });
+        });*/
 
 
-
-
-        binding.fab.setOnClickListener(new View.OnClickListener() {
+        /*binding.fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFrag()).commit();
             }
         });
-
+*/
 
     }
+
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
-        switch (item.getItemId()) {
+     /*   switch (item.getItemId()) {
 
             case R.id.home:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFrag()).commit();
                 break;
-        }
+
+            case R.id.notifications:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new GoalFrag()).commit();
+                break;
+
+        }*/
         return true;
     }
 }

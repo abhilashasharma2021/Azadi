@@ -119,11 +119,18 @@
                    android:layout_centerInParent="true"
                     android:fontFamily="@font/google_sans_medium"
                     android:text="00.00.00"
+                    android:id="@+id/timeText"
                     android:gravity="center"
                     android:textStyle="bold"
                     android:textColor="@color/black"
                     android:textSize="14sp" />
-
+                <TextView
+                    android:id="@+id/stepText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="60sp"
+                    tools:text="" />
 
                 <soup.neumorphism.NeumorphFloatingActionButton
                     android:id="@+id/fab"
@@ -175,13 +182,15 @@
                   <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginEnd="15dp"
 
+                       android:id="@+id/distanceText"
                         android:layout_centerVertical="true"
-                        android:layout_toLeftOf="@+id/txKm"
+
                         android:fontFamily="@font/google_sans_medium"
                         android:textColor="@color/grey"
-                        android:text="75.8 "
+                        android:text="75.8"
+                      android:layout_marginRight="45dp"
+                      android:layout_alignParentRight="true"
                         android:textStyle="bold"
                         android:textSize="13sp" />
 
@@ -191,6 +200,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="15dp"
                         android:id="@+id/txKm"
+                        android:visibility="gone"
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
                         android:fontFamily="@font/google_sans_medium"
@@ -382,7 +392,7 @@
                     android:layout_marginTop="30dp"
                     android:layout_marginBottom="2dp"
                     app:cardBackgroundColor="@color/background"
-                    app:cardCornerRadius="45dp"
+                    app:cardCornerRadius="30dp"
                     app:cardElevation="5dp">
 
 
@@ -393,6 +403,7 @@
                         android:layout_gravity="center"
                         android:fontFamily="@font/google_sans_medium"
                         android:text="STOP"
+
                         android:textColor="@color/red"
                         android:textSize="14sp" />
 
@@ -402,7 +413,7 @@
 
 
                 <soup.neumorphism.NeumorphImageButton
-                    android:id="@+id/flat_image_view"
+                    android:id="@+id/ivMap"
                     style="@style/Widget.Neumorph.ImageButton"
                     android:layout_width="85dp"
                     android:layout_alignParentRight="true"
@@ -494,44 +505,6 @@
 
 
 
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/flat_image_view1"
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:visibility="gone"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginRight="10dp"
-                app:cardBackgroundColor="@color/red"
-                app:cardCornerRadius="5dp"
-                app:cardElevation="5dp">
-
-
-                <com.google.android.material.card.MaterialCardView
-                    android:layout_width="wrap_content"
-                    android:layout_gravity="end"
-                    app:cardBackgroundColor="@drawable/newtest"
-                    android:layout_height="match_parent">
-
-                    <LinearLayout
-                        android:layout_width="100dp"
-                        android:layout_alignParentRight="true"
-                        android:orientation="vertical"
-                        android:layout_height="match_parent">
-
-
-
-                    </LinearLayout>
-
-                </com.google.android.material.card.MaterialCardView>
-
-
-
-
-
-
-            </com.google.android.material.card.MaterialCardView>
 
 
 

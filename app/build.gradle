@@ -62,4 +62,20 @@ dependencies {
 
    //CircleMenu
     implementation 'com.ramotion.circlemenu:circle-menu:0.3.2'
+
+    //map
+    implementation 'com.google.android.gms:play-services-maps:17.0.1'
+    implementation 'com.google.android.gms:play-services-location:18.0.0'
+
+
+    //dexter
+    implementation 'com.karumi:dexter:6.0.2'
+
+
+    implementation 'com.sa90.materialarcmenu:library:1.4'
+
+    implementation 'com.github.imangazalievm:circlemenu:3.0.0'
+
+
+
 }

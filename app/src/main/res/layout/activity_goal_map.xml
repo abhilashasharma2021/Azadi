@@ -1,23 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".activity.GoalMapActivity">
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="60dp"
+        android:id="@+id/card"
         android:layout_marginBottom="5dp"
         app:cardBackgroundColor="@color/background"
         app:cardElevation="5dp">
@@ -92,89 +85,75 @@
         </RelativeLayout>
     </com.google.android.material.card.MaterialCardView>
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:background="@drawable/map"
-            android:layout_height="match_parent">
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_alignParentBottom="true"
-                android:layout_height="wrap_content">
 
-                <soup.neumorphism.NeumorphFloatingActionButton
-                    style="@style/Widget.Neumorph.FloatingActionButton"
-                    android:id="@+id/fab1"
-                    android:layout_marginBottom="@dimen/_80sdp"
-                    android:layout_width="@dimen/_100sdp"
-                    android:layout_height="@dimen/_100sdp"
-                    android:layout_gravity="center"
-                    android:layout_centerInParent="true"
-                    android:scaleType="centerInside"
-                    android:alpha="0.6"
-                    app:neumorph_shapeType="basin"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent" >
+    <fragment
+        android:id="@+id/map"
+        android:layout_below="@+id/card"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.azadi.activity.GoalMapActivity" />
 
 
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="visible">
+
+        <soup.neumorphism.NeumorphFloatingActionButton
+            android:id="@+id/fab1"
+            style="@style/Widget.Neumorph.FloatingActionButton"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/_80sdp"
+            android:scaleType="centerInside"
+            app:neumorph_backgroundColor="@color/background"
+            app:neumorph_shapeType="basin">
 
 
-                </soup.neumorphism.NeumorphFloatingActionButton>
+        </soup.neumorphism.NeumorphFloatingActionButton>
 
-                <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/cardIv"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:layout_centerInParent="true"
-                    android:layout_marginBottom="2dp"
-                    app:cardBackgroundColor="@color/background"
-                    app:cardCornerRadius="45dp"
-                    app:cardElevation="5dp">
-
-
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:fontFamily="@font/google_sans_medium"
-                        android:text="STOP"
-                        android:textColor="@color/red"
-                        android:textSize="14sp" />
-
-                </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardIv"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="2dp"
+            app:cardBackgroundColor="@color/background"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="5dp">
 
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/google_sans_medium"
+                android:text="STOP"
+                android:textColor="@color/red"
+                android:textSize="14sp" />
+
+        </com.google.android.material.card.MaterialCardView>
 
 
-                <soup.neumorphism.NeumorphImageButton
-                    android:id="@+id/flat"
-                    style="@style/Widget.Neumorph.ImageButton"
-                    android:layout_width="85dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginRight="@dimen/_15ssp"
-                    android:layout_height="85dp"
-                    app:neumorph_shapeType="basin"
-                    android:layout_marginTop="@dimen/_50sdp"
-                    android:scaleType="centerInside"
-                    android:src="@drawable/location" />
-            </RelativeLayout>
+        <soup.neumorphism.NeumorphImageButton
+            android:id="@+id/flat"
+            style="@style/Widget.Neumorph.ImageButton"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:layout_marginRight="@dimen/_15ssp"
+            android:scaleType="centerInside"
+            android:src="@drawable/location"
+            app:neumorph_backgroundColor="@color/background"
+            app:neumorph_shapeType="basin" />
+    </RelativeLayout>
 
 
-
-
-
-
-
-
-
-
-
-        </RelativeLayout>
-
-
-
-    </LinearLayout>
-    </ScrollView>
 </RelativeLayout>

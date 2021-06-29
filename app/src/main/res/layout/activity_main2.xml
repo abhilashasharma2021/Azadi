@@ -5,5 +5,43 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activity.MainActivity2">
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/flat_image_view1"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:visibility="visible"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="10dp"
+        app:cardBackgroundColor="@color/red"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp">
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="wrap_content"
+            android:layout_gravity="end"
+            app:cardBackgroundColor="@drawable/newtest"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_alignParentRight="true"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+
+
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+
+    </com.google.android.material.card.MaterialCardView>
 
 </RelativeLayout>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp">
+
+    <RelativeLayout
+        android:id="@+id/rl_main"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/purple_200"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:src="@drawable/arrow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:text="Step Counter"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/dayRecordText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_main"
+        android:layout_marginTop="20dp"
+        android:textSize="24sp"
+        android:visibility="gone"
+        tools:text="Day record: " />
+
+    <TextView
+        android:id="@+id/stepLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dayRecordText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="31dp"
+        android:text="Steps taken:"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/stepText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/stepLabel"
+        android:layout_centerHorizontal="true"
+        android:textSize="60sp"
+        tools:text="0" />
+
+    <TextView
+        android:id="@+id/timeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/stepText"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="70dp"
+        android:textSize="20sp"
+        tools:text="Time: " />
+
+    <TextView
+        android:id="@+id/distanceText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/timeText"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        tools:text="Distance: " />
+
+    <TextView
+        android:id="@+id/orientationText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/distanceText"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        tools:text="Orientation: " />
+
+    <TextView
+        android:id="@+id/speedText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/orientationText"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        tools:text="Average speed: " />
+
+    <Button
+        android:id="@+id/settingsButton"
+        style="?android:attr/selectableItemBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:background="@color/purple_200"
+        android:text="Settings"
+        android:textAllCaps="false"
+        android:textColor="#f9f9f7"
+        android:visibility="gone" />
+
+
+    <TextView
+        android:id="@+id/achievedText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/stepText"
+        android:layout_centerHorizontal="true"
+        android:text="Record Achieved!"
+        android:textColor="#116892"
+        android:textSize="24sp"
+        android:visibility="invisible" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/resetButton"
+            style="?android:attr/selectableItemBackground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignTop="@+id/settingsButton"
+            android:layout_alignParentStart="true"
+            android:layout_weight="1"
+            android:background="@color/purple_200"
+            android:text="Reset"
+            android:textAllCaps="false"
+            android:textColor="#f9f9f7" />
+
+        <Button
+            android:id="@+id/startButton"
+            style="?android:attr/selectableItemBackground"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="1"
+            android:background="#ded9d9"
+            android:text="Start"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+</RelativeLayout>

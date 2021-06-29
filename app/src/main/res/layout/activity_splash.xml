@@ -12,8 +12,13 @@
         android:layout_width="match_parent"
         android:src="@drawable/circlelogonew"
         android:scaleType="fitXY"
+        android:visibility="visible"
         android:layout_height="match_parent">
 
 
     </ImageView>
+
+
+
+
 </RelativeLayout>
