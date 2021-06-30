@@ -135,6 +135,7 @@
 
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="100dp"
+                android:id="@+id/card"
                 android:layout_height="100dp"
                 android:layout_gravity="center"
                 app:cardBackgroundColor="@color/background"
@@ -147,22 +148,32 @@
     android:layout_height="wrap_content">
 
     <ImageView
-        android:layout_width="45dp"
-        android:layout_height="35dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:id="@+id/iv"
+        android:visibility="gone"
+        android:scaleType="fitXY"
         android:layout_centerHorizontal="true"
         android:layout_gravity="center"
+         />
+
+    <ImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:id="@+id/ivChoose"
+        android:visibility="visible"
+         android:layout_centerInParent="true"
         android:src="@drawable/upload"
         app:tint="@color/grey" />
-
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
         android:fontFamily="@font/google_sans_medium"
         android:text="choose a file"
-        android:layout_below="@+id/iv"
+        android:id="@+id/txChoose"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/ivChoose"
         android:gravity="center"
         android:textStyle="bold"
         android:textColor="@color/grey"

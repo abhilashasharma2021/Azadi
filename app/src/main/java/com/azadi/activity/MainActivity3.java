@@ -1,70 +1,126 @@
 package com.azadi.activity;
 
 
+import android.Manifest;
+
+import android.content.Intent;
+
+import android.content.pm.PackageManager;
+
+import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 
-import androidx.annotation.NonNull;
+import android.widget.TextView;
+import android.widget.Toast;
+
+
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.azadi.R;
-import com.ramotion.circlemenu.CircleMenuView;
 
-public class MainActivity3 extends AppCompatActivity {
+import com.google.zxing.integration.android.IntentIntegrator;
+import com.google.zxing.integration.android.IntentResult;
+
+
+import me.dm7.barcodescanner.zxing.ZXingScannerView;
+
+
+
+public class MainActivity3 extends AppCompatActivity  {
+TextView txScan;
+    ZXingScannerView mScannerView;
+    private static int SPLASH_TIME_OUT = 1000;
+    private static final int PERMISSIONS_REQUEST_READ_CONTACTS = 100;
+    private static final int PERMISSIONS_CALL_PHONE = 200;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main3);
 
+        mScannerView=findViewById(R.id.mScannerView);
+        mScannerView = new ZXingScannerView(this);   // Programmatically initialize the scanner view
+        setContentView(mScannerView);
 
-        final CircleMenuView menu = findViewById(R.id.circle_menu);
-        menu.setEventListener(new CircleMenuView.EventListener() {
-            @Override
-            public void onMenuOpenAnimationStart(@NonNull CircleMenuView view) {
-                Log.d("D", "onMenuOpenAnimationStart");
-            }
 
-            @Override
-            public void onMenuOpenAnimationEnd(@NonNull CircleMenuView view) {
-                Log.d("D", "onMenuOpenAnimationEnd");
-            }
+        new Handler().postDelayed(new Runnable() {
+            @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
+            public void run() {
 
-            @Override
-            public void onMenuCloseAnimationStart(@NonNull CircleMenuView view) {
-                Log.d("D", "onMenuCloseAnimationStart");
-            }
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M &&
+                        checkSelfPermission(Manifest.permission.CAMERA)
+                                != PackageManager.PERMISSION_GRANTED) {
+                    requestPermissions(new String[]
+                                    {Manifest.permission.CAMERA},
+                            PERMISSIONS_REQUEST_READ_CONTACTS);
 
-            @Override
-            public void onMenuCloseAnimationEnd(@NonNull CircleMenuView view) {
-                Log.d("D", "onMenuCloseAnimationEnd");
-            }
+                } else {
 
-            @Override
-            public void onButtonClickAnimationStart(@NonNull CircleMenuView view, int index) {
-                Log.d("D", "onButtonClickAnimationStart| index: " + index);
-            }
+                    IntentIntegrator integrator = new IntentIntegrator(MainActivity3.this);// Use a specific camera of the device
+                    integrator.setOrientationLocked(true);
+                    integrator.setBeepEnabled(true);
+                    integrator.setBarcodeImageEnabled(true);
+                    integrator.setCaptureActivity(CaptureActivityPortrait.class);
+                    integrator.initiateScan();
 
-            @Override
-            public void onButtonClickAnimationEnd(@NonNull CircleMenuView view, int index) {
-                Log.d("D", "onButtonClickAnimationEnd| index: " + index);
+                }
             }
+        }, SPLASH_TIME_OUT);
 
-            @Override
-            public boolean onButtonLongClick(@NonNull CircleMenuView view, int index) {
-                Log.d("D", "onButtonLongClick| index: " + index);
-                return true;
-            }
 
-            @Override
-            public void onButtonLongClickAnimationStart(@NonNull CircleMenuView view, int index) {
-                Log.d("D", "onButtonLongClickAnimationStart| index: " + index);
-            }
+        IntentIntegrator integrator = new IntentIntegrator(MainActivity3.this);// Use a specific camera of the device
+        integrator.setOrientationLocked(true);
+        integrator.setBeepEnabled(true);
+        integrator.setBarcodeImageEnabled(true);
+        integrator.setCaptureActivity(CaptureActivityPortrait.class);
+        integrator.initiateScan();
 
-            @Override
-            public void onButtonLongClickAnimationEnd(@NonNull CircleMenuView view, int index) {
-                Log.d("D", "onButtonLongClickAnimationEnd| index: " + index);
+
+    }
+
+
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
+        if (result != null) {
+            //if qrcode has nothing in it
+            if (result.getContents() == null) {
+
+                String strScannedData = result.getContents();
+
+                Toast.makeText(this, "Result Not Found", Toast.LENGTH_LONG).show();
+            } else {
+
+                try {
+
+                    String strScannedData = result.getContents();
+
+
+                } catch (Exception e) {
+                    Log.e("sh", e.getMessage());
+                }
+
+
+
+              /*  try {
+                    Log.e("djdfdfdsd", result.getContents());
+                    show_data(result.getContents());
+
+                }
+                catch (Exception ex) {
+                    Log.e("yrioewohjgksxjl", ex.getMessage());
+                    // Toast.makeText(this, result.getContents(), Toast.LENGTH_LONG).show();
+                }*/
             }
-        });
+        } else {
+
+
+            super.onActivityResult(requestCode, resultCode, data);
+        }
     }
 }

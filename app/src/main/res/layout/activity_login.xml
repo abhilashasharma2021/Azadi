@@ -221,17 +221,17 @@
                 android:id="@+id/cardAccount"
                 style="@style/Widget.Neumorph.ImageButton"
                 android:layout_width="match_parent"
-                android:layout_marginTop="5dp"
-                android:layout_marginStart="15dp"
-                android:layout_marginEnd="15dp"
                 android:layout_height="@dimen/_55sdp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp"
                 android:scaleType="centerInside"
-                app:neumorph_shapeType="flat" >
+                app:neumorph_shapeType="flat">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
 
                     <TextView
                         android:id="@+id/txAccount"
@@ -239,11 +239,10 @@
                         android:layout_height="wrap_content"
                         android:layout_centerInParent="true"
                         android:fontFamily="@font/google_sans_medium"
-                        android:textColor="@color/purple_200"
                         android:text="@string/create_new_account"
-                        android:textStyle="bold"
-                        android:textSize="13sp" />
-
+                        android:textColor="@color/purple_200"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
 
 
                 </RelativeLayout>

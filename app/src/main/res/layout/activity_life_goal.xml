@@ -1,0 +1,710 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".activity.CreateLifeGoalActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="5dp"
+        app:cardBackgroundColor="@color/background"
+        app:cardElevation="5dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardMenu"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="15dp"
+                android:layout_marginBottom="2dp"
+                app:cardBackgroundColor="@color/background"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="5dp">
+
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:padding="8dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/leftarrow"
+                    app:tint="@color/grey" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+
+        </RelativeLayout>
+
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cdProfile"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="-45dp"
+            android:layout_gravity="center"
+            android:layout_centerInParent="true"
+            app:cardBackgroundColor="@color/background"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="5dp">
+
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:src="@drawable/profileimg" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:orientation="vertical"
+       android:layout_marginTop="10dp"
+       android:layout_height="wrap_content">
+
+       <TextView
+           android:id="@+id/txName"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:fontFamily="@font/google_sans_medium"
+           android:lineSpacingExtra="39sp"
+           android:text="Rose Jhonson"
+           android:layout_gravity="center"
+           android:textColor="@color/black"
+           android:textSize="15sp"
+           android:textStyle="normal" />
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:fontFamily="@font/google_sans_medium"
+           android:lineSpacingExtra="39sp"
+           android:text="@string/life_goal"
+           android:layout_marginTop="5dp"
+           android:layout_gravity="center"
+           android:textColor="@color/black"
+           android:textSize="22sp"
+           android:textStyle="normal" />
+
+
+
+       <soup.neumorphism.NeumorphCardView
+           style="@style/Widget.Neumorph.CardView"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="25dp"
+           android:layout_marginTop="5dp"
+           android:layout_marginEnd="25dp"
+           app:neumorph_shapeType="pressed">
+
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="45dp"
+               android:layout_gravity="center"
+               android:gravity="center">
+
+               <EditText
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="12dp"
+                   android:layout_marginEnd="12dp"
+                   android:background="@null"
+                   android:layout_centerVertical="true"
+                   android:fontFamily="@font/google_sans_medium"
+                   android:hint="@string/create_goal"
+                   android:maxLength="80"
+                   android:singleLine="true"
+                   android:textSize="14sp" />
+
+
+               <ImageView
+                   android:layout_width="25dp"
+                   android:layout_height="25dp"
+                   android:src="@drawable/seerch"
+                   android:layout_centerVertical="true"
+                   android:layout_marginRight="@dimen/_15sdp"
+                   android:layout_alignParentRight="true"/>
+
+           </RelativeLayout>
+       </soup.neumorphism.NeumorphCardView>
+
+
+       <soup.neumorphism.NeumorphCardView
+           style="@style/Widget.Neumorph.CardView"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="25dp"
+           android:layout_marginEnd="25dp"
+           app:neumorph_shapeType="pressed">
+
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="45dp"
+               android:layout_gravity="center"
+               android:gravity="center">
+
+               <EditText
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="12dp"
+                   android:layout_marginEnd="12dp"
+                   android:background="@null"
+                   android:layout_centerVertical="true"
+                   android:fontFamily="@font/google_sans_medium"
+                   android:hint="@string/category"
+                   android:maxLength="80"
+                   android:singleLine="true"
+                   android:textSize="14sp" />
+
+
+               <ImageView
+                   android:layout_width="25dp"
+                   android:layout_height="25dp"
+                   android:layout_centerVertical="true"
+                   android:src="@drawable/seerch"
+                   android:layout_marginRight="@dimen/_15sdp"
+                   android:layout_alignParentRight="true"/>
+
+           </RelativeLayout>
+       </soup.neumorphism.NeumorphCardView>
+
+       <soup.neumorphism.NeumorphCardView
+           style="@style/Widget.Neumorph.CardView"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="25dp"
+           android:layout_marginEnd="25dp"
+           app:neumorph_shapeType="pressed">
+
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="45dp"
+               android:layout_gravity="center"
+               android:gravity="center">
+
+               <EditText
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="12dp"
+                   android:layout_marginEnd="12dp"
+                   android:background="@null"
+                   android:layout_centerVertical="true"
+                   android:fontFamily="@font/google_sans_medium"
+                   android:hint="@string/completion_days"
+                   android:maxLength="60"
+                   android:inputType="number"
+                   android:singleLine="true"
+                   android:textSize="14sp" />
+
+
+               <ImageView
+                   android:layout_width="25dp"
+                   android:layout_height="25dp"
+                   android:layout_centerVertical="true"
+                   android:src="@drawable/seerch"
+                   android:layout_marginRight="@dimen/_15sdp"
+                   android:layout_alignParentRight="true"/>
+
+           </RelativeLayout>
+       </soup.neumorphism.NeumorphCardView>
+
+
+
+       <soup.neumorphism.NeumorphCardView
+           style="@style/Widget.Neumorph.CardView"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="25dp"
+           android:layout_marginTop="10dp"
+           android:layout_marginEnd="25dp"
+           app:neumorph_shapeType="pressed">
+
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="100dp"
+               android:layout_gravity="center"
+               android:gravity="center">
+
+               <EditText
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="12dp"
+                   android:layout_marginEnd="12dp"
+                   android:background="@null"
+                   android:layout_centerVertical="true"
+                   android:fontFamily="@font/google_sans_medium"
+                   android:hint="@string/description"
+                   android:maxLength="150"
+                   android:singleLine="true"
+                   android:textSize="14sp" />
+
+
+
+
+           </RelativeLayout>
+       </soup.neumorphism.NeumorphCardView>
+
+
+       <RelativeLayout
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content">
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:fontFamily="@font/google_sans_medium"
+               android:lineSpacingExtra="39sp"
+               android:text="@string/reminder"
+               android:layout_marginStart="@dimen/_35sdp"
+               android:layout_gravity="center"
+               android:textColor="@color/black"
+               android:textSize="14sp"
+               android:textStyle="normal" />
+
+
+
+           <com.google.android.material.card.MaterialCardView
+               android:layout_width="30dp"
+               android:layout_height="30dp"
+               android:layout_marginRight="15dp"
+               android:layout_gravity="center_vertical"
+               android:layout_alignParentRight="true"
+               android:layout_marginBottom="2dp"
+               app:cardBackgroundColor="@color/background"
+               app:cardCornerRadius="20dp"
+               app:cardElevation="5dp">
+
+
+               <ImageView
+                   android:layout_width="35dp"
+                   android:layout_height="35dp"
+                   android:padding="8dp"
+                   android:layout_gravity="center"
+                   android:src="@drawable/check"
+                   app:tint="@color/purple_200" />
+
+           </com.google.android.material.card.MaterialCardView>
+
+
+
+
+       </RelativeLayout>
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:fontFamily="@font/google_sans_medium"
+           android:lineSpacingExtra="39sp"
+           android:text="@string/enter_time"
+           android:layout_gravity="center"
+           android:textColor="@color/grey"
+           android:textSize="12sp"
+           android:textStyle="normal" />
+
+
+
+       <soup.neumorphism.NeumorphCardView
+           style="@style/Widget.Neumorph.ImageButton"
+           android:layout_width="@dimen/_120sdp"
+           android:layout_gravity="center"
+           android:layout_height="@dimen/_50sdp"
+           android:scaleType="centerInside"
+           app:neumorph_shapeType="pressed" >
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:weightSum="2"
+               android:layout_gravity="center_vertical"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal">
+
+
+
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:fontFamily="@font/google_sans_medium"
+                   android:lineSpacingExtra="39sp"
+                   android:text="12 :59"
+                   android:gravity="center"
+                   android:layout_gravity="center"
+                   android:textColor="@color/black"
+                   android:textSize="18sp"
+                   android:textStyle="normal" />
+
+
+           </LinearLayout>
+
+
+       </soup.neumorphism.NeumorphCardView>
+
+
+       <RelativeLayout
+           android:layout_width="wrap_content"
+           android:layout_gravity="center"
+           android:layout_height="wrap_content">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:fontFamily="@font/google_sans_medium"
+               android:text="hour"
+               android:id="@+id/txHour"
+               android:layout_gravity="center"
+               android:textColor="@color/grey"
+               android:textSize="11sp"
+               android:textStyle="normal" />
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:fontFamily="@font/google_sans_medium"
+               android:text="minute"
+               android:layout_marginLeft="8dp"
+               android:layout_toRightOf="@+id/txHour"
+               android:layout_gravity="center"
+               android:textColor="@color/grey"
+               android:textSize="11sp"
+               android:textStyle="normal" />
+
+       </RelativeLayout>
+
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/google_sans_medium"
+        android:text="@string/repeat"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="@dimen/_35sdp"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="normal" />
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/flat_image_view1"
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+       android:layout_alignParentRight="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="15dp"
+        app:cardBackgroundColor="@color/background"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/google_sans_medium"
+            android:text="@string/everyday"
+            android:textColor="@color/black"
+            android:textSize="10sp" />
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+</RelativeLayout>
+
+
+       <LinearLayout
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_weight="7"
+           android:layout_gravity="center"
+           android:orientation="horizontal">
+
+
+           <com.google.android.material.card.MaterialCardView
+               android:layout_width="30dp"
+               android:layout_height="30dp"
+               android:layout_weight="1"
+               android:layout_marginRight="15dp"
+               android:layout_gravity="center_vertical"
+               android:layout_alignParentRight="true"
+               android:layout_marginBottom="2dp"
+               app:cardBackgroundColor="@color/background"
+               app:cardCornerRadius="20dp"
+               app:cardElevation="5dp">
+
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:fontFamily="@font/google_sans_medium"
+                   android:lineSpacingExtra="39sp"
+                   android:text="S"
+                   android:layout_gravity="center"
+                   android:textColor="@color/grey"
+                   android:textSize="12sp"
+                   android:textStyle="bold" />
+
+
+
+           </com.google.android.material.card.MaterialCardView>
+
+           <com.google.android.material.card.MaterialCardView
+               android:layout_width="30dp"
+               android:layout_height="30dp"
+               android:layout_weight="1"
+               android:layout_marginRight="15dp"
+               android:layout_gravity="center_vertical"
+               android:layout_alignParentRight="true"
+               android:layout_marginBottom="2dp"
+               app:cardBackgroundColor="@color/background"
+               app:cardCornerRadius="20dp"
+               app:cardElevation="5dp">
+
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:fontFamily="@font/google_sans_medium"
+                   android:lineSpacingExtra="39sp"
+                   android:text="M"
+                   android:layout_gravity="center"
+                   android:textColor="@color/grey"
+                   android:textSize="12sp"
+                   android:textStyle="bold" />
+
+
+           </com.google.android.material.card.MaterialCardView>
+
+           <com.google.android.material.card.MaterialCardView
+               android:layout_width="30dp"
+               android:layout_height="30dp"
+               android:layout_weight="1"
+               android:layout_marginRight="15dp"
+               android:layout_gravity="center_vertical"
+               android:layout_alignParentRight="true"
+               android:layout_marginBottom="2dp"
+               app:cardBackgroundColor="@color/background"
+               app:cardCornerRadius="20dp"
+               app:cardElevation="5dp">
+
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:fontFamily="@font/google_sans_medium"
+                   android:lineSpacingExtra="39sp"
+                   android:text="T"
+                   android:layout_gravity="center"
+                   android:textColor="@color/grey"
+                   android:textSize="12sp"
+                   android:textStyle="bold" />
+
+           </com.google.android.material.card.MaterialCardView>
+
+
+           <com.google.android.material.card.MaterialCardView
+               android:layout_width="30dp"
+               android:layout_height="30dp"
+               android:layout_weight="1"
+               android:layout_marginRight="15dp"
+               android:layout_gravity="center_vertical"
+               android:layout_alignParentRight="true"
+               android:layout_marginBottom="2dp"
+               app:cardBackgroundColor="@color/background"
+               app:cardCornerRadius="20dp"
+               app:cardElevation="5dp">
+
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:fontFamily="@font/google_sans_medium"
+                   android:lineSpacingExtra="39sp"
+                   android:text="W"
+                   android:layout_gravity="center"
+                   android:textColor="@color/grey"
+                   android:textSize="12sp"
+                   android:textStyle="bold" />
+           </com.google.android.material.card.MaterialCardView>
+           <com.google.android.material.card.MaterialCardView
+               android:layout_width="30dp"
+               android:layout_height="30dp"
+               android:layout_weight="1"
+               android:layout_marginRight="15dp"
+               android:layout_gravity="center_vertical"
+               android:layout_alignParentRight="true"
+               android:layout_marginBottom="2dp"
+               app:cardBackgroundColor="@color/background"
+               app:cardCornerRadius="20dp"
+               app:cardElevation="5dp">
+
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:fontFamily="@font/google_sans_medium"
+                   android:lineSpacingExtra="39sp"
+                   android:text="T"
+                   android:layout_gravity="center"
+                   android:textColor="@color/grey"
+                   android:textSize="12sp"
+                   android:textStyle="bold" />
+
+           </com.google.android.material.card.MaterialCardView>
+
+           <com.google.android.material.card.MaterialCardView
+               android:layout_width="30dp"
+               android:layout_height="30dp"
+               android:layout_weight="1"
+               android:layout_marginRight="15dp"
+               android:layout_gravity="center_vertical"
+               android:layout_alignParentRight="true"
+               android:layout_marginBottom="2dp"
+               app:cardBackgroundColor="@color/background"
+               app:cardCornerRadius="20dp"
+               app:cardElevation="5dp">
+
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:fontFamily="@font/google_sans_medium"
+                   android:lineSpacingExtra="39sp"
+                   android:text="F"
+                   android:layout_gravity="center"
+                   android:textColor="@color/grey"
+                   android:textSize="12sp"
+                   android:textStyle="bold" />
+           </com.google.android.material.card.MaterialCardView>
+
+           <com.google.android.material.card.MaterialCardView
+               android:layout_width="30dp"
+               android:layout_height="30dp"
+               android:layout_weight="1"
+               android:layout_marginRight="15dp"
+               android:layout_gravity="center_vertical"
+               android:layout_alignParentRight="true"
+               android:layout_marginBottom="2dp"
+               app:cardBackgroundColor="@color/background"
+               app:cardCornerRadius="20dp"
+               app:cardElevation="5dp">
+
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:fontFamily="@font/google_sans_medium"
+                   android:lineSpacingExtra="39sp"
+                   android:text="S"
+                   android:layout_gravity="center"
+                   android:textColor="@color/grey"
+                   android:textSize="12sp"
+                   android:textStyle="bold" />
+
+           </com.google.android.material.card.MaterialCardView>
+
+
+
+       </LinearLayout>
+
+
+
+
+       <soup.neumorphism.NeumorphCardView
+           android:id="@+id/cardAccount"
+           style="@style/Widget.Neumorph.ImageButton"
+           android:layout_width="match_parent"
+           android:layout_height="@dimen/_45sdp"
+           android:layout_marginStart="45dp"
+           android:layout_marginTop="5dp"
+           android:layout_marginEnd="45dp"
+           android:scaleType="centerInside"
+           app:neumorph_shapeType="flat">
+
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center">
+
+               <TextView
+                   android:id="@+id/txAccount"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_centerInParent="true"
+                   android:fontFamily="@font/google_sans_medium"
+                   android:text="@string/active_now"
+                   android:textColor="@color/grey"
+                   android:textSize="16sp"
+                   android:textStyle="bold" />
+
+
+           </RelativeLayout>
+
+
+       </soup.neumorphism.NeumorphCardView>
+
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:fontFamily="@font/google_sans_medium"
+           android:lineSpacingExtra="39sp"
+           android:text="Active Later"
+           android:layout_marginBottom="20dp"
+           android:layout_gravity="end"
+           android:layout_marginEnd="45dp"
+           android:textColor="@color/purple_200"
+           android:textSize="15sp"
+           android:textStyle="normal" />
+
+
+
+   </LinearLayout>
+
+
+
+    </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

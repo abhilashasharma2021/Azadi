@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.azadi.R;
 import com.azadi.adapter.TablayoutProfileAdapter;
 import com.azadi.databinding.ActivityShowGoalBinding;
 import com.google.android.material.tabs.TabLayout;
@@ -27,7 +26,12 @@ ActivityShowGoalBinding binding;
                 startActivity(new Intent(ShowGoalActivity.this,GoalDescriptionActivity.class));
             }
         });
-
+        binding.txCreate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ShowGoalActivity.this, CreateLifeGoalActivity.class));
+            }
+        });
 
 
         binding.tabLayout.addTab( binding.tabLayout.newTab().setText("Goal "));

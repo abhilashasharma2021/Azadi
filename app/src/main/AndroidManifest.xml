@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.azadi">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -8,35 +9,59 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION"/>
-    <uses-feature android:name="android.hardware.sensor.accelerometer"
-        android:required="true" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.CONNECTIVITY_INTERNAL"
+        tools:ignore="ProtectedPermissions" />
+
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:usesCleartextTraffic="true"
+        android:hardwareAccelerated="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Azadi">
-        <activity android:name=".activity.TrackStepsAndCalculateRunningDistanceActivity">
+        <activity android:name=".activity.CreateLifeGoalActivity"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan">
 
+        </activity>
+        <activity android:name=".activity.TrackStepsAndCalculateRunningDistanceActivity"></activity>
+        <activity android:name=".activity.MainActivity3" >
 
 
         </activity>
-        <activity android:name=".activity.MainActivity3"></activity>
         <activity android:name=".activity.MainActivity2" />
-        <activity android:name=".activity.GoalPhotoActivity" />
-        <activity android:name=".activity.GoalMapActivity"></activity>
-        <activity android:name=".activity.GoalTimerActivity" >
+        <activity android:name=".activity.GoalPhotoActivity">
 
-
-
-
+        </activity>
+        <activity android:name=".activity.GoalMapActivity"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
+        <activity android:name=".activity.GoalTimerActivity"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"></activity>
+        <activity android:name=".activity.GoalDescriptionActivity"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
+        <activity android:name=".activity.ShowGoalActivity"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan">
 
 
         </activity>
-        <activity android:name=".activity.GoalDescriptionActivity" />
-        <activity android:name=".activity.ShowGoalActivity" />
         <activity android:name=".activity.ProfileActivity" />
         <activity android:name=".activity.ShowPostActivity" />
         <activity
@@ -67,6 +92,7 @@
             android:name=".activity.SplashActivity"
             android:configChanges="orientation|screenSize"
             android:windowSoftInputMode="stateAlwaysHidden|adjustPan">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -80,7 +106,16 @@
             android:windowSoftInputMode="stateAlwaysHidden|adjustPan">
 
 
+
         </activity>
+
+        <activity
+            android:name=".activity.CaptureActivityPortrait"
+            android:screenOrientation="portrait"
+            android:stateNotNeeded="true"
+            android:theme="@style/zxing_CaptureTheme"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            tools:replace="screenOrientation" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"

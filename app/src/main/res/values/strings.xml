@@ -40,4 +40,14 @@
     <string name="reset">Reset</string>
     <string name="achieved">Record Achieved!</string>
     <string name="record">Day record: %1$d steps</string>
+    <string name="create_goal">Create Goal</string>
+    <string name="life_goal">Life Goal</string>
+    <string name="category">Category</string>
+    <string name="completion_days">Completion Days</string>
+    <string name="description">Description</string>
+    <string name="reminder">Reminder</string>
+    <string name="enter_time">Enter Time</string>
+    <string name="repeat">Repeat</string>
+    <string name="everyday">Everyday</string>
+    <string name="active_now">Active Now</string>
 </resources>

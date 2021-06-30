@@ -39,6 +39,7 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
+                android:layout_marginBottom="15dp"
                 android:backgroundTint="@color/background"
                 android:layout_centerHorizontal="true"
                 app:buttonColors="@array/bottom_bar_colors"
@@ -47,7 +48,7 @@
                 app:layout_anchor="@id/bottomNavigation"
                 app:maxAngle="180"
                 app:srcCompat="@drawable/menu"
-                app:startAngle="-150" />
+                app:startAngle="-160" />
            </com.google.android.material.card.MaterialCardView>
 
 

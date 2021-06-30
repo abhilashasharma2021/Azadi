@@ -433,6 +433,7 @@
                     android:layout_width="@dimen/_60sdp"
                     android:layout_height="30dp"
                     android:text="Create"
+                    android:id="@+id/txCreate"
                     android:layout_marginTop="@dimen/_70sdp"
                     android:layout_alignParentRight="true"
                     android:layout_gravity="end"

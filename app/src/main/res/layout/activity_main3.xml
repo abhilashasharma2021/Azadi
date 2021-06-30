@@ -12,11 +12,31 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/circle_menu"
+        android:visibility="gone"
         app:button_colors="@array/bottom_bar_colors"
         app:button_icons="@array/bottom_bar_icons"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="Scan"
+        android:id="@+id/txScan"
+        android:textSize="20dp"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content">
+
+
+    </TextView>
+
+    <me.dm7.barcodescanner.zxing.ZXingScannerView
+        android:id="@+id/mScannerView"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"/>
+
 
 </RelativeLayout>
